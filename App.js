@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { StyleSheet, ImageBackground, SafeAreaView } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
-import Colors from "./constants/colors";
-
 import StartGameScreen from "./screens/StartGameScreen";
 import GameScreen from "./screens/GameScreen";
+import Colors from "./constants/Colors";
 
 export default function App() {
   const [userNumber, setUserNumber] = useState();
