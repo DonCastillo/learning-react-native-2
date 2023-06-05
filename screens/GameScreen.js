@@ -2,6 +2,7 @@ import { useState } from "react";
 import { View, Text, StyleSheet } from "react-native";
 import NumberContainer from "../components/game/NumberContainer";
 import Title from "../components/ui/Title";
+import PrimaryButton from "../components/ui/PrimaryButton";
 
 
 function generateRandomBetween(min, max, exclude) {
@@ -13,6 +14,9 @@ function generateRandomBetween(min, max, exclude) {
     }
 }
 
+// function nextGuessHandler(direction) {
+// }
+
 function GameScreen({ userNumber }) {
     const initialGuess = generateRandomBetween(1, 100, userNumber);
     const [currentGuess, setCurrentGuess] = useState(initialGuess);
@@ -22,6 +26,10 @@ function GameScreen({ userNumber }) {
             <NumberContainer>{currentGuess}</NumberContainer>
             <View>
                 <Text>Higher or lower?</Text>
+                <View>
+                    <PrimaryButton>+</PrimaryButton>
+                    <PrimaryButton>-</PrimaryButton>
+                </View>
             </View>
             <View>{/* Log Rounds */}</View>
         </View>
